@@ -1,0 +1,56 @@
+*{
+    box-sizing:border-box;
+}
+header {
+    text-align: center;
+    font-size : 36px;
+    color: white;
+    background-color: lightgrey;
+    margin-top: 38px;
+    padding-top: 50px;
+    border-bottom: 2px double gold;
+    width:100%;
+    height: 50px;
+    /*height: 50px;*/
+
+}
+
+nav{
+  border: 1px dotted blue; 
+    background-color :lightgrey;
+    Margin-top:0;
+    padding-top: 0;
+}
+nav ul{
+    border: 2px solid green;
+}
+nav ul li {
+border: 1px dashed yellow;
+display: inline -block;
+width: 100px;
+height: 30px;
+background-color: gold;
+box-shadow: insert;
+
+}
+main{
+    border: 1px solid green;
+    display: inline-block;
+}
+ .wdd{
+    border:1px solid green;
+ }
+ /* Define style for html elements using its id.
+*/
+#article_img{
+width: 1000px;
+height: 1000px;
+}
+footer{
+    text-align: center;
+    font-size: 36px;
+    color:white;
+    background-color: blueviolet;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

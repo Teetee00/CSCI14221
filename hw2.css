@@ -1,0 +1,73 @@
+/* Flexbox Container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;            /* Allow images to wrap to next line */
+    justify-content: space-evenly; /* Space images evenly */
+    gap: 10px;                   /* Space between images */
+    width: 100%;                  /* Ensure the container takes full width */
+    box-shadow: 4px 4px 8px 0 rgb(12, 11, 11), 4px 6px 20px 0 rgb(200, 236, 200);
+}
+
+/* Flex Items */
+.flex-item {
+    flex-grow: 1;                 /* Allow items to grow and take available space */
+    flex-shrink: 1;               /* Allow items to shrink */
+    flex-basis: 30%;              /* Each item will take up 30% of the container width */
+    max-width: 300px;             /* Max width to prevent items from getting too large */
+    min-width: 150px;             /* Minimum width to allow items to shrink */
+    height: auto;                 /* Allow height to adjust automatically */
+}
+
+/* Image inside flex items */
+.flex-item img {
+    width: 100%;                  /* Ensure images take full width of their container */
+    height: auto;                 /* Maintain aspect ratio */
+    object-fit: cover;            /* Ensure images cover the container without distortion */
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid with auto fill */
+    gap: 10px;                    /* Space between grid items */
+    width: 100%;                  /* Ensure the grid takes full width */
+    box-shadow: 4px 4px 8px 0 rgb(12, 11, 11), 4px 6px 20px 0 rgb(200, 236, 200);
+}
+
+/* Grid Item Image */
+.grid-item img {
+    width: 100%;                  /* Make image fill the grid item */
+    height: auto;                 /* Maintain aspect ratio */
+    object-fit: cover;            /* Ensure images fit without distortion */
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 8px 8px 16px 0px rgba(216, 230, 31, 0.836), 8px 8px 16px 0px rgba(187, 116, 116, 0.2);
+    padding: 12px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: black;
+}
+
+/* Counter for H2 elements */
+body {
+    counter-reset: x; /* Declare a counter */
+}
+
+h2::after {
+    counter-increment: x;
+    content: counter(x) ": ";
+}

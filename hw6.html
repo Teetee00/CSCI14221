@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Homework 4 Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #f5f9f6; 
+    }
+  
+    .bg-sage {
+      background-color: #9CAF88 !important;
+      color: white;
+    }
+  </style>
+</head>
+<body onload="initialize()">
+  <h3 class="bg-sage">Before you Begin, Please log In</h3>
+  <form class="form-inline" id="loginForm" onsubmit="handleSubmit(event)">
+    <label for="name" class="mb-2 mr-sm-2">Name:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Enter name" name="name">
+    
+    <label for="pwd" class="mb-2 mr-sm-2">Password:</label>
+    <input type="password" class="form-control mb-2 mr-sm-2" id="pwd" placeholder="Enter password" name="pswd">
+    
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    <button type="reset" class="btn btn-secondary mb-2">Reset</button>
+  </form>
+
+  <div class="text-center mb-4">
+    <button id="btn1" type="button" class="btn btn-outline-success">Connect</button>
+    <button id="btn2" type="button" class="btn btn-outline-info">Message</button>
+  </div>
+
+  <script>
+    function initialize() {
+      document.getElementById('btn1').addEventListener('click', function() {
+        alert("Connect button clicked!");
+      });
+      document.getElementById('btn2').addEventListener('click', function() {
+        alert("Message button clicked!");
+      });
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault(); // Prevent the default form submission
+      const name = document.getElementById('name').value;
+      const password = document.getElementById('pwd').value;
+      alert(`Name: ${name}\nPassword: ${password}`);
+    }
+  </script>
+
+  <div class="jumbotron text-center">
+    <h1 class="display-4 bg-sage p-2 rounded">A Peak of My Army Journey</h1>
+  </div>
+
+  <hr>  
+
+  <div class="container">
+    <h3 class="bg-sage p-2 rounded"><u>My Process</u></h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <h4>Testing</h4>
+        <p>
+          I talked to a recruiter about what I wanted to do. They signed me up to take a test called the ASVAB.
+          I scored a 32, which limited my job options, but that didn’t discourage me from joining.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <h4>Mental and Physical Preparation</h4>
+        <p>
+          I worked out every day and learned yoga to help with peace of mind.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <h4>Basic Training, AIT, and Unit</h4>
+        <p>
+          Basic Training lasted 10 weeks. We went through 4 phases that taught combat skills, obstacle courses, shooting, and army life.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron text-center mb-0">
+    <p>&copy; 2025 Specialist Freeman</p>
+  </div>
+</body>
+</html>
